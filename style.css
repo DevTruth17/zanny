@@ -1,0 +1,313 @@
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary-color: #FF6E75;
+}
+body {
+    background: #fff;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 700;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.1);
+    background: url(./images/IMG-20220218-WA0056.jpg);
+    background-size: cover;
+    padding: 30px 10px 0 20px;
+}
+.logo img {
+    width: 80px;
+    border-radius: 50%;
+}
+.header::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.2),#C2667B);
+    pointer-events: none;
+}
+.header-links {
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 22px;
+    transition: all 0.5s ease;
+}
+.nav-mobile {
+    position: absolute;
+    top: 5vh;
+    left: 20%;
+    width: 60%;
+    height: 40vh;
+    background: linear-gradient(45deg,#fff,#C2667B);
+    box-shadow: 0 0 15px 2px rgba(0,0,0,0.1);
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+}
+.header-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    border: 2px solid #fff;
+    height: 40px;
+    padding: 5px 10px;
+}
+.anchor {
+    border: none !important;
+}
+.nav-btn {
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    background: transparent;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    display: none;
+    transition: all ease .5s;
+}
+.nav-btn i {
+    font-size: 30px;
+    transition: all ease .5s;
+}
+.fa-xmark {
+    font-size: 30px;
+}
+
+.main {
+    position: absolute;
+    top: 100vh;
+    width: 100%;
+    min-height: 100vh;
+}
+.about {
+    width: 100%;
+    padding: 50px 0;
+    display: grid;
+    place-items: center;
+    background: url("./images/about-bg.svg"), linear-gradient(#fff,#C2667B);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: var(--primary-color);
+}
+.about div {
+    width: 60%;
+}
+.about div p {
+    margin-top: 30px;
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 22px;
+}
+.services {
+    width: 100%;
+    background: url("./images/services-bg.svg"), linear-gradient(#fff,#C2667B);
+    display: grid;
+    place-items: center;
+    padding: 50px 0;
+    color: #fff;
+}
+.product {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 60px 0 30px 0;
+}
+.left, .right {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: transparent;
+    border: 2px solid var(--primary-color);
+}
+.left::before, .right::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    transform: translate(-75%,15%);
+    width: 40px;
+    height: 40px;
+    border: 20px solid transparent;
+    border-right-color: #fff;
+    pointer-events: none;
+}
+.right::before {
+    transform: translate(-25%,15%);
+    border-right-color: transparent;
+    border-left-color: #fff;
+}
+.product-img {
+    width: 80%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.slide {
+    color: var(--primary-color);
+}
+.image {
+    width: 100%;
+    height: 70vh;
+    transition: all 2s ease;
+}
+.image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.hide {
+    display: none;
+}
+.customer {
+    width: 100%;
+    background: #fff;
+    display: grid;
+    place-items: center;
+    padding-top: 50px;
+    color: var(--primary-color);
+    padding: 50px 0;
+}
+.cards {
+    margin-top: 60px;
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.card {
+    background: #fff;
+    width: 45%;
+    height: 180px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 5px rgba(0,0,0,0.1);
+    display: flex;
+}
+.left-card {
+    position: relative;
+    width: 20%;
+    background: linear-gradient(#fff,#C2667B);
+    background-size: cover;
+    height: 180px;
+    border-radius: 10px  100% 100% 10px;
+}
+.img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.right-card {
+    position: relative;
+    left: 15%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.name {
+    text-align: center;
+    border-bottom: 2px solid var(--primary-color);
+    width: 50%;
+}
+
+.contact {
+    padding: 50px 0;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    background: url("./images/contact-bg.svg"), linear-gradient(#fff,#C2667B);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 500;
+}
+.contact > div {
+    width: 90%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+.contact p {
+    color: var(--primary-color);
+}
+.fa-brands {
+    font-size: 30px;
+    vertical-align: middle;
+}
+.fa-facebook-square {
+    color: rgb(66, 103, 178);
+}
+.fa-whatsapp-square {
+    color: rgb(37, 211, 102);
+}
+.fa-twitter-square {
+    color: rgb(29, 161, 242);
+}
+.contact > div img {
+    width: 30px;
+}
+
+@media (max-width:360px) {
+    .header {
+        background-size: cover;
+        height: 50vh;
+    }
+    .header::before {
+        height: 50vh;
+    }
+    .header-links {
+        display: none;
+    }
+    .nav-btn {
+        display: flex;
+    }
+    .main {
+        top: 50vh;
+    }
+    .left, .right {
+        display: none;
+    }
+    .product-img {
+        overflow-x: scroll;
+    }
+    .customer {
+        flex-direction: column;
+    }
+    .cards {
+        flex-direction: column;
+        width: 90%;
+    }
+    .card {
+        width: 100%;
+    }
+}
