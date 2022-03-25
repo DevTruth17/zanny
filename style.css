@@ -263,11 +263,21 @@ body {
     height: 100px;
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: space-evenly;
     text-align: center;
 }
 .contact p {
     color: var(--primary-color);
+}
+.contact a {
+    color: rgb(240, 84, 84);
+}
+.contact a:hover {
+    color: #af3137;
+}
+.contact a:active {
+    color: #af3137;
 }
 .fa-brands {
     font-size: 30px;
