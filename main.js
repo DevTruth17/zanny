@@ -1,3 +1,15 @@
+const headerBackground = document.querySelector(".header")
+let numberOfImage = 10
+let i = 1
+function changeHeaderBg() {
+    headerBackground.style.background = `url('./images/zanny-${i}.jpg')`
+    headerBackground.style.backgroundSize = "100% 100%"
+    headerBackground.classList.add("header-bg")
+    document.getElementById("logo").style.opacity = "0.7"
+    i = (i+1) % numberOfImage
+}
+setInterval(changeHeaderBg,2000)
+
 const navBtn = document.getElementById("nav-btn")
 const links = document.querySelector(".header-links")
 

@@ -6,6 +6,10 @@
 :root {
     --primary-color: #FF6E75;
 }
+::selection {
+    background: var(--primary-color);
+    color: #fff;
+}
 body {
     background: #fff;
     font-family: 'Fredoka', sans-serif;
@@ -20,10 +24,10 @@ body {
     height: 100vh;
     display: flex;
     justify-content: space-between;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.1);
-    background: url(./images/IMG-20220218-WA0056.jpg);
+    background: url(./images/zanny-0.jpg);
     background-size: cover;
     padding: 30px 10px 0 20px;
+    transition: background 2s ease;
 }
 .logo img {
     width: 80px;
@@ -44,7 +48,7 @@ body {
     display: flex;
     justify-content: space-around;
     font-size: 22px;
-    transition: all 0.5s ease;
+    transition: all .5s ease;
 }
 .nav-mobile {
     position: absolute;
@@ -97,6 +101,10 @@ body {
     top: 100vh;
     width: 100%;
     min-height: 100vh;
+}
+.main > div {
+    min-height: 80vh;
+    background-size: 100% 100%;
 }
 .about {
     width: 100%;
@@ -165,6 +173,7 @@ body {
     overflow: hidden;
 }
 .slide {
+    font-size: 30px;
     color: var(--primary-color);
 }
 .image {
@@ -277,9 +286,8 @@ body {
     width: 30px;
 }
 
-@media (max-width:360px) {
+@media (max-width:600px) {
     .header {
-        background-size: cover;
         height: 50vh;
     }
     .header::before {
