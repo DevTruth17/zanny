@@ -156,13 +156,13 @@ body {
     width: 40px;
     height: 40px;
     border: 20px solid transparent;
-    border-right-color: #fff;
+    border-right-color: rgb(245, 79, 79);
     pointer-events: none;
 }
 .right::before {
     transform: translate(-25%,15%);
     border-right-color: transparent;
-    border-left-color: #fff;
+    border-left-color: rgb(245, 79, 79);
 }
 .product-img {
     width: 80%;
@@ -240,10 +240,13 @@ body {
     justify-content: space-evenly;
     align-items: center;
 }
+.right-card p {
+    text-align: center;
+}
 .name {
     text-align: center;
     border-bottom: 2px solid var(--primary-color);
-    width: 50%;
+    width: 60%;
 }
 
 .contact {
@@ -305,6 +308,9 @@ body {
     }
     .header-links {
         display: none;
+    }
+    .header-links a {
+        border: 0;
     }
     .nav-btn {
         display: flex;
